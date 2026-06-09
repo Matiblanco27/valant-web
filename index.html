@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valant | Consultora Inmobiliaria</title>
+    <meta name="description" content="Valant - Consultora Inmobiliaria. Encontrá tu propiedad ideal. Venta, alquiler e inversiones inmobiliarias.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.jpg" alt="Valant Logo" style="height: 50px; margin-right: 10px;">
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Encontrá tu lugar ideal con Valant</h1>
+            <p>Somos tu consultora inmobiliaria de confianza. Te acompañamos en cada paso para comprar, vender o alquilar tu propiedad con total transparencia.</p>
+            
+            <div class="hero-search">
+                <select id="search-type">
+                    <option value="">Tipo de Propiedad</option>
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="terreno">Terreno</option>
+                </select>
+                <select id="search-operation">
+                    <option value="">Operación</option>
+                    <option value="venta">Venta</option>
+                    <option value="alquiler">Alquiler</option>
+                </select>
+                <button class="btn btn-primary" onclick="document.getElementById('propiedades').scrollIntoView({behavior: 'smooth'})">Buscar Propiedades</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="nosotros-content">
+                <div class="nosotros-img">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultora Inmobiliaria Valant" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 15px rgba(0,0,0,0.1);">
+                </div>
+                <div class="nosotros-text">
+                    <p>En <strong>Valant</strong>, entendemos que una propiedad es mucho más que metros cuadrados; es el escenario de tu vida o el pilar de tu inversión.</p>
+                    <p>Nuestra consultora nace con el objetivo de ofrecer una atención personalizada y cercana. Contamos con un conocimiento profundo del mercado local y garantizamos transparencia en cada operación.</p>
+                    
+                    <div class="team-members">
+                        <div class="member">
+                            <i class="fas fa-user-tie fa-3x" style="color: var(--primary-color);"></i>
+                            <h4>Agustín Vallejos</h4>
+                            <p>Fundador y Asesor</p>
+                        </div>
+                        <div class="member">
+                            <i class="fas fa-user-tie fa-3x" style="color: var(--primary-color);"></i>
+                            <h4>Fabricio Antunez</h4>
+                            <p>Fundador y Asesor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home service-icon"></i>
+                    <h3>Compra y Venta</h3>
+                    <p>Gestión integral para la compra y venta de inmuebles, asegurando el mejor valor de mercado y asesoramiento legal completo.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-key service-icon"></i>
+                    <h3>Alquileres</h3>
+                    <p>Administración eficiente de propiedades en alquiler. Encontramos al inquilino ideal y nos ocupamos de los trámites.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Inversiones</h3>
+                    <p>Asesoramiento especializado para inversores. Identificamos oportunidades rentables en el mercado inmobiliario actual.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search-dollar service-icon"></i>
+                    <h3>Tasaciones</h3>
+                    <p>Tasaciones profesionales y objetivas basadas en el análisis real del mercado local para conocer el valor exacto de tu propiedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propiedades Section -->
+    <section id="propiedades" class="propiedades">
+        <div class="container">
+            <h2 class="section-title">Propiedades Destacadas</h2>
+            
+            <div class="carousel-section">
+                <h3 class="carousel-title">Propiedades en Venta</h3>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track" id="track-venta">
+                        <!-- Venta properties will be injected here -->
+                    </div>
+                    <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="carousel-section">
+                <h3 class="carousel-title">Propiedades en Alquiler</h3>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track" id="track-alquiler">
+                        <!-- Alquiler properties will be injected here -->
+                    </div>
+                    <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="carousel-section">
+                <h3 class="carousel-title">Terrenos en Venta</h3>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track" id="track-terrenos">
+                        <!-- Terrenos properties will be injected here -->
+                    </div>
+                    <button class="carousel-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/5493765251886" target="_blank" class="btn btn-primary">Solicitar Catálogo Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Comunicate con Nosotros</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Estamos para ayudarte</h3>
+                    <p>Dejanos tu consulta o comunicate directamente con nuestros asesores.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>Agustín Vallejos:</strong> +54 9 376 525-1886<br>
+                                <strong>Fabricio Antunez:</strong> +54 9 376 481-5607
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <strong>Instagram:</strong> <br>
+                                <a href="https://www.instagram.com/consultora_valant" target="_blank">@consultora_valant</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Ubicación:</strong> <br>
+                                Argentina
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Tu Nombre Completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Tu Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Tu Teléfono (Opcional)">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Tu Mensaje o Consulta" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col" style="max-width: 300px; text-align: left;">
+                    <h3 style="color: white; margin-bottom: 15px;">VALANT</h3>
+                    <p>Consultora inmobiliaria comprometida con tus objetivos. Transparencia, profesionalismo y confianza en cada operación.</p>
+                </div>
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="#inicio">Inicio</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#nosotros">Nosotros</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#propiedades">Propiedades</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Seguinos</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/consultora_valant" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5493765251886" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Valant Consultora Inmobiliaria. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493765251886?text=Hola,%20me%20gustaría%20hacer%20una%20consulta" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/properties.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

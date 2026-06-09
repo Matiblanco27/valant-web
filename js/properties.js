@@ -1,0 +1,80 @@
+const properties = [
+    {
+        id: 1,
+        title: "Casa Moderna en Centro",
+        type: "casa",
+        operation: "venta",
+        location: "Posadas, Centro",
+        price: "USD 120,000",
+        bedrooms: 3,
+        bathrooms: 2,
+        area: "150 m²",
+        image: "assets/images/casa1.jpg",
+        description: "Hermosa casa moderna ubicada en pleno centro, con amplios espacios y excelente iluminación natural."
+    },
+    {
+        id: 2,
+        title: "Departamento Amueblado",
+        type: "departamento",
+        operation: "alquiler",
+        location: "Posadas, Costanera",
+        price: "$ 250,000 ARS/mes",
+        bedrooms: 1,
+        bathrooms: 1,
+        area: "45 m²",
+        image: "assets/images/depto1.jpg",
+        description: "Departamento moderno y completamente amueblado, ideal para estudiantes o ejecutivos."
+    },
+    {
+        id: 3,
+        title: "Terreno para Inversión",
+        type: "terreno",
+        operation: "venta",
+        location: "Garupá",
+        price: "USD 25,000",
+        bedrooms: 0,
+        bathrooms: 0,
+        area: "300 m²",
+        image: "assets/images/terreno1.jpg",
+        description: "Lote ideal para construcción de dúplex o vivienda familiar en zona de gran crecimiento."
+    },
+    {
+        id: 4,
+        title: "Casa Familiar con Piscina",
+        type: "casa",
+        operation: "venta",
+        location: "Itaembé Guazú",
+        price: "USD 85,000",
+        bedrooms: 4,
+        bathrooms: 3,
+        area: "200 m²",
+        image: "assets/images/casa2.jpg",
+        description: "Espaciosa casa con patio grande, piscina y quincho. Perfecta para la familia."
+    },
+    {
+        id: 5,
+        title: "Oficina Céntrica",
+        type: "departamento",
+        operation: "alquiler",
+        location: "Posadas, Microcentro",
+        price: "$ 300,000 ARS/mes",
+        bedrooms: 2,
+        bathrooms: 1,
+        area: "60 m²",
+        image: "assets/images/depto2.jpg",
+        description: "Oficina lista para ocupar, con divisiones y aire acondicionado en edificio comercial."
+    },
+    {
+        id: 6,
+        title: "Terreno Comercial",
+        type: "terreno",
+        operation: "venta",
+        location: "Ruta 12",
+        price: "USD 150,000",
+        bedrooms: 0,
+        bathrooms: 0,
+        area: "1000 m²",
+        image: "assets/images/terreno2.jpg",
+        description: "Excelente lote sobre avenida principal, ideal para desarrollo comercial o galpón."
+    }
+];
