@@ -620,19 +620,51 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
     .nav-links {
-        display: none; /* simple mobile menu handling for now */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        display: none;
+    }
+    .nav-links.nav-active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 10px 0;
     }
     .mobile-menu-btn {
         display: block;
     }
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .hero-search {
         flex-direction: column;
     }
     .nosotros-content, .contact-wrapper {
         grid-template-columns: 1fr;
+    }
+    .property-card {
+        min-width: 80vw;
+        max-width: 80vw;
+    }
+    .carousel-btn {
+        display: none; /* Hide arrows on mobile, rely on swipe/scroll */
+    }
+    .carousel-section {
+        padding: 0 10px; /* Prevent touching edges */
+    }
+    .footer-col {
+        text-align: center !important;
+        margin: 0 auto;
     }
 }
