@@ -222,6 +222,62 @@
         </div>
     </section>
 
+    <!-- Property Modal -->
+    <div class="modal-overlay" id="property-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="modal-main-image">
+                        <img src="" id="modal-img-main" alt="Propiedad">
+                        <span class="property-badge" id="modal-badge"></span>
+                        <div class="scroll-indicator">
+                            <span>Desliza para más info</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="modal-thumbnails" id="modal-thumbnails">
+                        <!-- Thumbnails injected via JS -->
+                    </div>
+                </div>
+                
+                <div class="modal-content-grid">
+                    <div class="modal-info-left">
+                        <h3 class="property-title" id="modal-title"></h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> <span id="modal-location"></span>
+                        </div>
+                        <h2 class="property-price" id="modal-price"></h2>
+                        
+                        <div class="property-features" id="modal-features">
+                            <!-- Features injected via JS -->
+                        </div>
+                        
+                        <div class="modal-description">
+                            <h4>Descripción de la Propiedad</h4>
+                            <p id="modal-desc"></p>
+                        </div>
+                        
+                        <div class="modal-map" id="modal-map-container">
+                            <!-- Map iframe injected via JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-info-right">
+                        <div class="contact-card">
+                            <h4>¿Te interesa esta propiedad?</h4>
+                            <p>Comunicate con nuestros asesores para recibir más información, coordinar una visita o sacarte cualquier duda.</p>
+                            <div class="advisors-buttons">
+                                <a href="#" target="_blank" class="btn btn-primary" id="btn-agustin"><i class="fab fa-whatsapp"></i> Agustín Vallejos</a>
+                                <a href="#" target="_blank" class="btn btn-primary" id="btn-fabricio"><i class="fab fa-whatsapp"></i> Fabricio Antunez</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">

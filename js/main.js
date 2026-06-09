@@ -44,11 +44,90 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${prop.bathrooms > 0 ? `<div class="feature"><i class="fas fa-bath"></i> ${prop.bathrooms} Baños</div>` : ''}
                         <div class="feature"><i class="fas fa-ruler-combined"></i> ${prop.area}</div>
                     </div>
-                    <a href="https://wa.me/5493765251886?text=Hola,%20me%20interesa%20la%20propiedad%20${prop.title}" target="_blank" class="btn btn-outline" style="width: 100%; display: block; margin-top: 10px;">Consultar</a>
+                    <button class="btn btn-outline" style="width: 100%; display: block; margin-top: 10px;" onclick="openPropertyModal('${prop.id}')">Ver más</button>
                 </div>
             `;
             
             track.appendChild(card);
+        });
+    }
+
+    // Modal Logic
+    const modal = document.getElementById('property-modal');
+    const closeBtn = document.getElementById('modal-close');
+
+    window.openPropertyModal = function(id) {
+        const prop = properties.find(p => p.id == id);
+        if (!prop) return;
+
+        // Populate info
+        document.getElementById('modal-price').textContent = prop.price;
+        document.getElementById('modal-title').textContent = prop.title;
+        document.getElementById('modal-location').textContent = prop.location;
+        document.getElementById('modal-desc').textContent = prop.description;
+        document.getElementById('modal-badge').textContent = prop.operation.toUpperCase();
+
+        // Features
+        const featuresEl = document.getElementById('modal-features');
+        featuresEl.innerHTML = '';
+        if (prop.bedrooms > 0) featuresEl.innerHTML += `<div class="feature"><i class="fas fa-bed"></i> ${prop.bedrooms} Hab.</div>`;
+        if (prop.bathrooms > 0) featuresEl.innerHTML += `<div class="feature"><i class="fas fa-bath"></i> ${prop.bathrooms} Baños</div>`;
+        featuresEl.innerHTML += `<div class="feature"><i class="fas fa-ruler-combined"></i> ${prop.area}</div>`;
+
+        // Advisor Links
+        const wMsg = encodeURIComponent(`Hola, me interesa la propiedad: ${prop.title} (${prop.location})`);
+        document.getElementById('btn-agustin').href = `https://wa.me/5493765251886?text=${wMsg}`;
+        document.getElementById('btn-fabricio').href = `https://wa.me/5493764815607?text=${wMsg}`;
+
+        // Gallery
+        const mainImg = document.getElementById('modal-img-main');
+        const thumbnailsEl = document.getElementById('modal-thumbnails');
+        
+        const imgs = prop.images && prop.images.length > 0 ? prop.images : [prop.image];
+        mainImg.src = imgs[0];
+        
+        thumbnailsEl.innerHTML = '';
+        if (imgs.length > 1) {
+            imgs.forEach((imgSrc, idx) => {
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.className = 'thumb-img' + (idx === 0 ? ' active' : '');
+                thumb.onclick = function() {
+                    mainImg.src = imgSrc;
+                    document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                };
+                thumbnailsEl.appendChild(thumb);
+            });
+        }
+
+        // Map
+        const mapContainer = document.getElementById('modal-map-container');
+        if (mapContainer) {
+            // using the mapQuery or location property as search query for google maps embed
+            const query = encodeURIComponent(prop.mapQuery || prop.location);
+            mapContainer.innerHTML = `
+                <iframe src="https://www.google.com/maps?q=${query}&output=embed" width="100%" height="300" style="border:0; border-radius: var(--border-radius-sm); margin-top: 15px; box-shadow: var(--shadow-soft);" allowfullscreen="" loading="lazy"></iframe>
+                <a href="https://www.google.com/maps/search/?api=1&query=${query}" target="_blank" style="display: inline-block; margin-top: 10px; color: var(--primary-color); font-weight: 600; text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Abrir en Google Maps</a>
+            `;
+        }
+
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent scrolling behind
+    };
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
 

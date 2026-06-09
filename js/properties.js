@@ -1,5 +1,53 @@
 const properties = [
     {
+        id: "hidrelco-1",
+        title: "Casa Barrio Hidrelco",
+        type: "casa",
+        operation: "venta",
+        location: "Calle 77 A N° 8901, Barrio Hidrelco – Posadas",
+        mapQuery: "Calle 77 A 8901, Barrio Hidrelco, Posadas, Misiones, Argentina",
+        price: "USD 46,000",
+        bedrooms: 2,
+        bathrooms: 1,
+        area: "Apta Crédito",
+        image: "assets/images/casa-hidrelco/principal.jpeg",
+        images: [
+            "assets/images/casa-hidrelco/principal.jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM.jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (1).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (2).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (3).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (4).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (5).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (6).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (7).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (8).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (9).jpeg",
+            "assets/images/casa-hidrelco/WhatsApp Image 2026-06-08 at 11.35.43 PM (10).jpeg"
+        ],
+        description: `🏡 Casa en venta – Barrio Hidrelco, Posadas 🏡
+
+✨ Características principales:
+Sala / Comedor amplios 🛋️
+2 habitaciones confortables 🛏️🛏️
+1 baño completo 🚿
+Lavadero independiente 🧺
+Garage cubierto para 2 autos 🚗🚗
+Quincho con parrilla ideal para reuniones 🍖🔥
+Depósito para guardado extra 📦
+Patio amplio perfecto para disfrutar al aire libre 🌳☀️
+Apta para crédito hipotecario 🏦✅
+
+🌟 Ubicación privilegiada:
+Cerca de supermercados 🛒
+A minutos de escuelas y jardines 🏫
+Rápido acceso a transporte público 🚍
+Próximo a avenidas principales y comercios locales 🏪
+
+✅ Espacios bien distribuidos y funcionales
+✅ Ideal para familia o proyecto de inversión`
+    },
+    {
         id: 1,
         title: "Casa Moderna en Centro",
         type: "casa",
